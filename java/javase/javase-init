@@ -1,0 +1,15 @@
+#! /bin/bash
+
+echo "creating directories..."
+mkdir ant
+mkdir build
+mkdir config
+mkdir dist
+mkdir lib
+mkdir src
+echo "done."
+
+echo "copy templates..."
+cp ~/home/templates/javase/build.xml ant/
+cp ~/home/templates/javase/README .
+echo "done."

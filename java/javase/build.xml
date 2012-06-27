@@ -1,0 +1,77 @@
+<project name="AppBuilder"
+    default="compile"
+    basedir="..">
+    <description><+project description+></description>
+
+    <!-- properties definition -->
+    <!-- NOTE properties are case sensitive -->
+    <!-- this will be used as the jar name -->
+    <property name="project.name" value="<+project name+>" />
+    <!-- modified class name which will be run -->
+    <property name="project.mainclass" value="<+main class+>" />
+
+    <!-- compile class path -->
+    <path id="classpath">
+        <fileset dir="lib" includes="<+lib files+>" />
+    </path>
+
+    <!-- compile -->
+    <target name="compile" depends="init">
+        <javac srcdir="src" destdir="build/classes" 
+            includeAntRuntime="false">
+            <!-- using UTF-8 to get rid of GBK -->
+            <compilerarg line="-encoding UTF-8" />
+            <classpath refid="classpath" />
+        </javac>
+    </target>
+    
+    <!-- clean -->
+    <target name="clean">
+        <delete includeemptydirs="true">
+            <fileset dir="build" includes="**/*" />
+            <fileset dir="dist" includes="**/*" />
+        </delete>
+    </target>
+
+    <!-- init -->
+    <target name="init">
+        <mkdir dir="build/classes" />
+        <mkdir dir="build/lib" />
+    </target>
+    
+    <!-- copy files to build/ -->
+    <target name="copy" depends="compile">
+        <!-- copy lib files -->
+        <copy todir="build/lib">
+            <fileset dir="lib" />
+        </copy>
+        <!-- copy config files -->
+        <copy todir="build/WEB-INF/classes">
+            <fileset dir="config" />
+        </copy>
+    </target>
+    
+    <!-- run the main class -->
+    <target name="run" depends="compile">
+        <java fork="true"
+            classname="${project.mainclass}">
+            <!-- class path for a test run -->
+            <classpath>
+                <path refid="classpath" />
+                <pathelement path="build/classes" />
+            </classpath>
+        </java>
+    </target>
+
+    <!-- create jar archive -->
+    <!-- CANNOT run alone, it depends on the libs in build/lib -->
+    <target name="jar" depends="copy">
+        <jar destfile="dist/${project.name}.jar" >
+            <fileset dir="build/classes" />
+        </jar>
+        <manifest>
+            <attribute name="Main-Class"
+                value="${project.mainclass}" />
+        </manifest>
+    </target>
+</project>

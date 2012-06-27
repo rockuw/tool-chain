@@ -1,0 +1,76 @@
+<project name="AppBuilder"
+    default="compile"
+    basedir="..">
+    <description><+Project Description+></description>
+
+    <!-- properties definition -->
+    <!-- NOTE properties are case sensitive -->
+    <!-- this will be used as the war name -->
+    <property name="project.name" value="<+project name+>" />
+    <!-- used to auto deploy, MAKE SURE you have access to that directory-->
+    <property name="tomcat.home" value="<+tomcat home path+>" />
+
+    <!-- class path -->
+    <path id="classpath">
+        <fileset dir="lib" includes="<+lib files+>" />
+    </path>
+
+    <!-- compile -->
+    <target name="compile" depends="init">
+        <javac srcdir="src" destdir="build/WEB-INF/classes" 
+            includeAntRuntime="false">
+            <!-- using UTF-8 to get rid of GBK -->
+            <compilerarg line="-encoding UTF-8" />
+            <classpath refid="classpath" />
+        </javac>
+    </target>
+    
+    <!-- clean -->
+    <target name="clean">
+        <delete includeemptydirs="true">
+            <fileset dir="build" includes="**/*" />
+            <fileset dir="dist" includes="**/*" />
+        </delete>
+    </target>
+
+    <!-- init -->
+    <target name="init">
+        <mkdir dir="build/WEB-INF/classes" />
+        <mkdir dir="build/WEB-INF/lib" />
+    </target>
+    
+    <!-- copy files to build/ -->
+    <target name="copy" depends="compile">
+        <!-- copy WEB-INF files -->
+        <copy todir="build/WEB-INF">
+            <fileset dir="etc" />
+        </copy>
+        <!-- copy config files -->
+        <copy todir="build/WEB-INF/classes">
+            <fileset dir="config" />
+        </copy>
+        <!-- copy web content -->
+        <copy todir="build">
+            <fileset dir="web" />
+        </copy>
+        <!-- copy lib files -->
+        <copy todir="build/WEB-INF/lib">
+            <fileset dir="lib" />
+        </copy>
+    </target>
+
+    <!-- create war archive -->
+    <target name="war" depends="copy">
+        <war destfile="dist/${project.name}.war"
+            webxml="build/WEB-INF/web.xml" >
+            <fileset dir="build" />
+        </war>
+    </target>
+
+    <!-- deploy to tomcat -->
+    <target name="deploy" depends="copy">
+        <copy todir="${tomcat.home}/webapps/${project.name}">
+            <fileset dir="build" />
+        </copy>
+    </target>
+</project>

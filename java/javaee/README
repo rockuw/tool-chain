@@ -1,0 +1,26 @@
+<+Project Name+>
+----------------
+<+project descriptions may be+>
+
+DIR STRUCTURE
+----------------
+.
+|-- README -> this readme file
+|-- ant -> ant related files, build.xml and maybe property file
+|   `-- build.xml
+|-- build -> files generated during compile, include classes and lib etc.
+|-- config -> config files that will go into WEB-INF/classes
+|-- dist -> distributables, war, jar
+|-- etc -> web config files, web.xml, sun-application.xml etc.
+|   `-- web.xml
+|-- lib -> libraries
+|-- src -> source code
+`-- web -> web contents, html, jsp, etc.
+
+CONFIG
+----------------
+<+instructions for setting proper configurations+>
+
+DEPLOY
+----------------
+<+instructions for deploying the application+>

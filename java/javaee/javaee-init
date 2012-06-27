@@ -1,0 +1,18 @@
+#! /bin/bash
+
+echo "creating directories..."
+mkdir ant
+mkdir build
+mkdir dist
+mkdir config
+mkdir etc
+mkdir lib
+mkdir src
+mkdir web
+echo "done."
+
+echo "copy templates..."
+cp ~/home/templates/javaee/web.xml etc/
+cp ~/home/templates/javaee/build.xml ant/
+cp ~/home/templates/javaee/README .
+echo "done."

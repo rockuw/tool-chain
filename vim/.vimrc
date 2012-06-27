@@ -24,8 +24,14 @@ set fileencodings=utf-8,gbk
 "map ,w :w<CR>
 "map ,q :q<CR>
 map ,a <C-W><C-W>
+map ,f :NERDTree<CR>
 map ,v :vs<CR><C-W><C-W>
+map tt :tabnew<CR>
+map tn :tabnext<CR>
+map tp :tabprevious<CR>
+map tc :tabclose<CR>
 imap {<CR> {<CR>}<Esc>O
+map ,d :set filetype=htmldjango<CR>
 "map ,v :vs<CR><C-W><C-W>:call SourceName()<CR>
 
 " imap pp

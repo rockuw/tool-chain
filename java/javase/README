@@ -1,0 +1,22 @@
+<+Project Name+>
+----------------
+<+project descriptions may be+>
+
+DIR STRUCTURE
+----------------
+.
+|-- README -> this readme file
+|-- ant -> ant related files, build.xml and maybe property file
+|   `-- build.xml
+|-- build -> files generated during compile, include classes and lib etc.
+|-- dist -> distributables, war, jar
+|-- lib -> libraries
+|-- src -> source code
+
+CONFIG
+----------------
+<+instructions for setting proper configurations+>
+
+DEPLOY
+----------------
+<+instructions for deploying the application+>
