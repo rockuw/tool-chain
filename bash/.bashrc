@@ -4,7 +4,7 @@
 export EDITOR=vim
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-export PATH=$PATH:~/QtSDK/Desktop/Qt/474/gcc/bin:/Volumes/MacData/bin:/usr/local/mysql/bin
+export PATH=$PATH:~/freeman/bin
 
 # allow inputing chinese in terminal
 set convert-meta off

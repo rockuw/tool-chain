@@ -1,5 +1,5 @@
 " functions
-function SourceName()
+function SourcePair()
 	let current_file = @%
 	let dot_index = strridx(current_file, ".")
 	let file_name = strpart(current_file, 0, dot_index)
@@ -18,11 +18,8 @@ set number
 set hlsearch
 set incsearch
 set fileencodings=utf-8,gbk
-"colo darkblue
 
 " key mappings
-"map ,w :w<CR>
-"map ,q :q<CR>
 map ,a <C-W><C-W>
 map ,f :NERDTree<CR>
 map ,v :vs<CR><C-W><C-W>
@@ -31,17 +28,20 @@ map tn :tabnext<CR>
 map tp :tabprevious<CR>
 map tc :tabclose<CR>
 imap {<CR> {<CR>}<Esc>O
-map ,d :set filetype=htmldjango<CR>
-"map ,v :vs<CR><C-W><C-W>:call SourceName()<CR>
+"map ,v :vs<CR><C-W><C-W>:call SourcePair()<CR>
 
-" imap pp
-" imap ll
+" auto command
 augroup MyIMAPs
     au!
 "    au VimEnter * call IMAP('()', '(<++>)<++>', '')
 "    au VimEnter * call IMAP('{}', '{<++>}<++>', '')
 "    au VimEnter * call IMAP('[]', '[<++>]<++>', '')
 "    au VimEnter * call IMAP('<>', '<<++>><++>', '')
+augroup END
+
+augroup MyFileTypes
+    autocmd!
+    autocmd FileType ruby,eruby,yaml set ai sw=2 sts=2 et
 augroup END
 
 " for vim-latex
