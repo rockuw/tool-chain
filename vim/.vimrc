@@ -1,4 +1,5 @@
 " functions
+" open the corresponding .cpp file when viewing .h file
 function SourcePair()
 	let current_file = @%
 	let dot_index = strridx(current_file, ".")
@@ -18,29 +19,34 @@ set number
 set hlsearch
 set incsearch
 set fileencodings=utf-8,gbk
-set so=999
+" keep the current line in the middle of window
+set so=999 
 
 " key mappings
+" switch between split windows
 map ,a <C-W><C-W>
+" open NERDTree file browser
 map ,f :NERDTree<CR>
+" shortcut for vsplit
 map ,v :vs<CR><C-W><C-W>
+" tab operations
 map tt :tabnew<CR>
 map tn :tabnext<CR>
 map tp :tabprevious<CR>
 map tc :tabclose<CR>
 imap {<CR> {<CR>}<Esc>O
 "map ,v :vs<CR><C-W><C-W>:call SourcePair()<CR>
+"imap <% <%%><Esc>hi
 
 " auto command
+" powerful IMAP from vim-latex
 augroup MyIMAPs
     au!
-    au VimEnter * call IMAP('ER', '<%<++>%><++>', '')
+    au VimEnter * call IMAP('ERB', '<%<++>%><++>', '')
 "    au VimEnter * call IMAP('()', '(<++>)<++>', '')
-"    au VimEnter * call IMAP('{}', '{<++>}<++>', '')
-"    au VimEnter * call IMAP('[]', '[<++>]<++>', '')
-"    au VimEnter * call IMAP('<>', '<<++>><++>', '')
 augroup END
 
+" file type auto command
 augroup MyFileTypes
     autocmd!
     autocmd FileType ruby,eruby,yaml set ai sw=2 sts=2 et
@@ -52,3 +58,7 @@ set shellslash
 set grepprg=grep\ -nH\ $*
 filetype indent on
 let g:tex_flavor='latex'
+
+" for session.vim plugin
+let g:session_autosave = 'no'
+let g:session_autoload = 'no'
