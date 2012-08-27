@@ -18,6 +18,7 @@ set number
 set hlsearch
 set incsearch
 set fileencodings=utf-8,gbk
+set so=999
 
 " key mappings
 map ,a <C-W><C-W>
@@ -33,6 +34,7 @@ imap {<CR> {<CR>}<Esc>O
 " auto command
 augroup MyIMAPs
     au!
+    au VimEnter * call IMAP('ER', '<%<++>%><++>', '')
 "    au VimEnter * call IMAP('()', '(<++>)<++>', '')
 "    au VimEnter * call IMAP('{}', '{<++>}<++>', '')
 "    au VimEnter * call IMAP('[]', '[<++>]<++>', '')

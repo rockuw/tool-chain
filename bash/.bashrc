@@ -21,3 +21,7 @@ alias sl='ls'
 alias gcc='gcc -Wall'
 alias g++='g++ -Wall'
 alias clang='clang -Wall'
+alias txt='open -a textedit'
+alias cdb='cd $OLDPWD'
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
