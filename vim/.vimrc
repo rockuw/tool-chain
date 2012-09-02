@@ -16,11 +16,14 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set number
+set ruler
 set hlsearch
 set incsearch
 set fileencodings=utf-8,gbk
 " keep the current line in the middle of window
 set so=999 
+" remove the delay after 'O', see help esckeys
+set ttimeoutlen=100
 
 " key mappings
 " switch between split windows
@@ -42,7 +45,8 @@ imap {<CR> {<CR>}<Esc>O
 " powerful IMAP from vim-latex
 augroup MyIMAPs
     au!
-    au VimEnter * call IMAP('ERB', '<%<++>%><++>', '')
+    " for eruby template files
+    au VimEnter * call IMAP('ERB', '<%<++>%><++>', 'eruby')
 "    au VimEnter * call IMAP('()', '(<++>)<++>', '')
 augroup END
 
