@@ -1,0 +1,7 @@
+[submodule "rhtml"]
+    path=emacs/.emacs.d/rhtml
+    url=git://github.com/eschulte/rhtml.git
+
+[submodule "rinari"]
+    path=emacs/.emacs.d/rinari
+    url=git://github.com/eschulte/rinari.git
