@@ -1,0 +1,63 @@
+ls
+ls
+ls
+pwd
+ls
+ls
+help
+./benchmark.rb 
+ls
+./t.rb 
+mv test.java Main.java
+ls
+ls
+javac Main.java
+java Main.class 
+java -cp Main.class Main
+java Main
+javac Main.java
+top
+ls
+ls
+ls
+cd
+ls
+cd freeman/rails/blog/
+ls
+cd
+cd /tmp
+ls
+ls
+./a.out
+cd
+cd freeman/rails/blog/
+ls
+ls
+irb
+ls
+ls db/migrate/
+rails generate scaffold user name:string email:string blog:string 
+ls
+rake db:migrate
+ls
+ls
+ls
+ls
+ls
+ls
+ls
+ls
+ls
+cat 
+ls
+help
+ls
+ls
+rails generate migration add_author_info_to_post
+rake db:migrate
+l
+ls
+rails console
+rails console
+ls
+./hello -DABD=123

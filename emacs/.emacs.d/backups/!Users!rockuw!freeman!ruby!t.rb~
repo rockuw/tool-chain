@@ -1,0 +1,9 @@
+#! /usr/bin/env ruby
+# -*- encoding: utf-8 -*-
+
+def reverseReplace(text, word, replace)
+  text.sub!(word, replace)
+  text.split(' ').reverse.join(' ')
+end
+
+puts reverseReplace("I like cats", "cats", "dogs")

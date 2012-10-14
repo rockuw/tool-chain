@@ -1,0 +1,25 @@
+;; This buffer is for notes you don't want to save, and for Lisp evaluation.
+;; If you want to create a file, visit that file with C-x C-f,
+;; then enter the text in that file's own buffer.
+
+(defun count-words-buffer ()
+  (interactive)
+  (let ((count 0))
+    (save-excursion
+      (goto-char (point-min))
+      (while (< (point) (point-max))
+        (forward-word 1)
+        (setq count (1+ count)))
+      (message "buffer contains %d words." count))))
+
+(count-words-buffer)
+(point-max)
+(insert "hello")
+(message "hello")
+(defun increment-number-at-point ()
+  (interactive)
+  (skip-chars-backward "0123456789")
+  (or (looking-at "[0123456789]+")
+      (error "No number at point"))
+  (replace-match (number-to-string (1+ (string-to-number (match-string 0))))))
+increment-number-at-point

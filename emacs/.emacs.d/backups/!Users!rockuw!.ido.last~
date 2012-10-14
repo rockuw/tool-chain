@@ -1,0 +1,123 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/rockuw/.emacs.d/elpa/" . "scss-mode-0.5.0/")
+ ("/Users/rockuw/freeman/rails/blog/db/" . "migrate/")
+ ("/Users/rockuw/freeman/rails/blog/app/views/" . "posts/")
+ ("/Users/rockuw/freeman/rails/blog/app/" . "helpers/")
+ ("/Users/rockuw/freeman/rails/" . "blog/")
+ ("/" . "tmp/")
+ ("/tmp/" . "dir/")
+ ("/Users/rockuw/freeman/" . "ruby/")
+ ("/Users/rockuw/" . "freeman/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/rockuw/.emacs.d/elpa/scss-mode-0.5.0/"
+ "/Users/rockuw/freeman/cpp/"
+ "/Users/rockuw/freeman/sae/blog/wp-admin/"
+ "/Users/rockuw/freeman/blog/my-interview-experience/"
+ "~/freeman/blog/my-interview-experience/"
+ "/tmp/"
+ "/Users/rockuw/freeman/rails/blog/app/assets/stylesheets/"
+ "/Users/rockuw/freeman/rails/blog/app/views/posts/"
+ "/Users/rockuw/freeman/rails/blog/db/migrate/"
+ "/Users/rockuw/freeman/rails/blog/app/models/"
+ "/Users/rockuw/freeman/ruby/"
+ "/Users/rockuw/.emacs.d/auto-complete/"
+ "/Users/rockuw/.emacs.d/"
+ "/Users/rockuw/freeman/rails/blog/app/helpers/"
+ "/Users/rockuw/freeman/algorithm-samples/"
+ "/Users/rockuw/"
+ "/Users/rockuw/freeman/templates/"
+ "/Users/rockuw/freeman/notes/"
+ "/"
+ "/Users/rockuw/freeman/bin/"
+ "/tmp/dir/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "scss-mode.el"
+ "operator.cpp"
+ "post.php"
+ "my-interview-experience.html"
+ "hello.c"
+ "application.css"
+ "show.html.erb"
+ "20121010144340_add_author_info_to_post.rb"
+ "user.rb"
+ "combsort.rb"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/rockuw/.emacs.d/elpa/scss-mode-0.5.0/" (20595 58239) "scss-mode.elc" "scss-mode.el" "scss-mode-pkg.elc" "scss-mode-pkg.el" "scss-mode-autoloads.el" "../" "./")
+
+ ("/Users/rockuw/.emacs.d/elpa/" (20601 17186) "starter-kit-ruby-2.0.3/" "starter-kit-2.0.3/" "smex-2.0/" "scss-mode-0.5.0/" "php-mode-1.5.0/" "paredit-22/" "magit-1.2.0/" "inf-ruby-2.2.3/" "ido-ubiquitous-1.5/" "idle-highlight-mode-1.1.2/" "find-file-in-project-3.2/" "archives/" "../" "./")
+
+ ("/Users/rockuw/.emacs.d/elpa/php-mode-1.5.0/" (20601 17187) "php-mode.elc" "php-mode.el" "php-mode-pkg.elc" "php-mode-pkg.el" "php-mode-autoloads.el" "../" "./")
+
+ ("/Users/rockuw/freeman/cpp/" (20576 8182) "virtual-inheritance.cpp" "test.cpp" "test" "a.out" "a.cpp" "a" "../" "./")
+
+ ("/Users/rockuw/freeman/sae/blog/wp-admin/" (20601 17711) "widgets.php" "users.php" "user-new.php" "user-edit.php" "user/" "upload.php" "upgrade.php" "upgrade-functions.php" "update.php" "update-core.php" "tools.php" "themes.php" "theme-install.php" "theme-editor.php" "setup-config.php" "revision.php" "profile.php" "press-this.php" "post.php" "post-new.php" "plugins.php" "plugin-install.php" "plugin-editor.php" "options.php" "options-writing.php" "options-reading.php" "options-privacy.php" "options-permalink.php" "options-media.php" "options-head.php" "options-general.php" "options-discussion.php" "network.php" "network/" "nav-menus.php" "my-sites.php" "ms-users.php" "ms-upgrade-network.php" "ms-themes.php" "ms-sites.php" "ms-options.php" "ms-edit.php" "ms-delete-site.php" "ms-admin.php" "moderation.php" "menu.php" "menu-header.php" "media.php" "media-upload.php" "media-new.php" "maint/" "load-styles.php" "load-scripts.php" "link.php" "link-parse-opml.php" "link-manager.php" "link-add.php" "js/" "install.php" "install-helper.php" "index.php" "index-extra.php" "includes/" "import.php" "images/" "gears-manifest.php" "freedoms.php" "export.php" "edit.php" "edit-tags.php" "edit-tag-form.php" "edit-link-form.php" "edit-form-comment.php" "edit-form-advanced.php" "edit-comments.php" "custom-header.php" "custom-background.php" "css/" "credits.php" "comment.php" "async-upload.php" "admin.php" "admin-post.php" "admin-header.php" "admin-functions.php" "admin-footer.php" "admin-ajax.php" ".svn/" "../" "./")
+
+ ("/Users/rockuw/freeman/blog/my-interview-experience/" (20601 15441) "my-interview-experience.mkd" "my-interview-experience.html" "../" "./")
+
+ ("~/freeman/blog/my-interview-experience/" (20601 14240) "my-interview-experience.mkd" "../" "./")
+
+ ("/tmp/" (20599 34629) "launchd-651.O0FxcW/" "launchd-126.BAR5Hp/" "launch-LbEh9d/" "launch-IV95bj/" "launch-FdnPA9/" "launch-4S2VjF/" "hello.c" "hello" "../" "./")
+
+ ("/Users/rockuw/freeman/rails/blog/app/assets/stylesheets/" (20598 27543) "users.css.scss" "tomorrow-night-bright.css" "scaffolds.css.scss" "posts.css.scss" "posts.css.css" "comments.css.scss" "application.css" ".sass-cache/" "../" "./")
+
+ ("/Users/rockuw/freeman/rails/blog/app/views/posts/" (20598 27432) "show.html.erb" "new.html.erb" "index.html.erb" "edit.html.erb" "_form.html.erb" "../" "./")
+
+ ("/Users/rockuw/freeman/rails/blog/db/migrate/" (20597 35335) "20121010144340_add_author_info_to_post.rb" "20121010141529_create_users.rb" "20120918130709_add_userinfo_to_comment.rb" "20120913091705_add_attrs_to_comment.rb" "20120913091100_add_attrs_to_post.rb" "20120913090234_create_comments.rb" "20120913090202_create_posts.rb" "../" "./")
+
+ ("/Users/rockuw/freeman/rails/blog/db/" (20597 35347) "seeds.rb" "schema.rb" "migrate/" "development.sqlite3" "../" "./")
+
+ ("/Users/rockuw/freeman/rails/blog/app/models/" (20598 26283) "user.rb" "post.rb" "comment.rb" ".gitkeep" "../" "./")
+
+ ("/Users/rockuw/" (20596 12472) "ROCKU" "Public/" "Pictures/" "Music/" "Movies/" "Library/" "goagent/" "freeman/" "Downloads/" "Documents/" "Desktop/" "dashui" ".zshrc" ".zlogin" ".xdvirc" ".Xauthority" ".vimrc" ".viminfo" ".vim/" ".Trash/" ".todo-top" ".todo-do" ".subversion/" ".ssh/" ".sqlite_history" ".rvm/" ".recentf" ".NERDTreeBookmarks" ".mysql_history" ".mongorc.js" ".lesshst" ".irb_history" ".irb-history" ".ido.last" ".gitconfig" ".gem/" ".fontconfig/" ".emacs.d/" ".emacs" ".DS_Store" ".dbshell" ".CFUserTextEncoding" ".bundler/" ".bashrc" ".bash_login" ".bash_history" "../" "./")
+
+ ("/Users/rockuw/freeman/rails/blog/app/assets/" (20536 12828) "stylesheets/" "javascripts/" "images/" "../" "./")
+
+ ("/Users/rockuw/.emacs.d/auto-complete/" (20590 64276) "popup.elc" "popup.el" "fuzzy.elc" "fuzzy.el" "auto-complete.elc" "auto-complete.el" "auto-complete-config.elc" "auto-complete-config.el" "ac-dict/" "../" "./")
+
+ ("/Users/rockuw/.emacs.d/" (20595 58246) "rinari/" "rhtml/" "places" "markdown-mode/" "init.el" "eshell/" "elpa/" "backups/" "auto-save-list/" "auto-complete/" "ac-comphist.dat" ".smex-items" "../" "./")
+
+ ("/Users/rockuw/freeman/rails/blog/app/helpers/" (20565 5828) "posts_helper.rb" "comments_helper.rb" "application_helper.rb" "../" "./")
+
+ ("/Users/rockuw/freeman/rails/blog/app/views/" (20561 41258) "posts/" "layouts/" "comments/" "../" "./")
+
+ ("/Users/rockuw/freeman/rails/blog/app/" (20536 12828) "views/" "models/" "mailers/" "helpers/" "controllers/" "assets/" "../" "./")
+
+ ("/Users/rockuw/freeman/rails/blog/app/controllers/" (20596 4737) "posts_controller.rb" "comments_controller.rb" "application_controller.rb" "../" "./")
+
+ ("/Users/rockuw/freeman/ruby/" (20593 22334) "template.rb" "t.rb" "sudoku.rb" "sudoku-test.rb" "ruby-src/" "my_prime.rb" "memorize.rb" "input" "dashui.rb" "combsort.rb" "benchmark.rb" "../" "./")
+
+ ("/Users/rockuw/freeman/rails/" (20557 57265) "mysite/" "depot/" "blog/" "../" "./")
+
+ ("/Users/rockuw/freeman/rails/blog/" (20581 3308) "vendor/" "tmp/" "test/" "script/" "README.rdoc" "Rakefile" "public/" "log/" "lib/" "Gemfile.lock" "Gemfile" "doc/" "db/" "config.ru" "config/" "app/" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/rockuw/freeman/algorithm-samples/" (20593 16272) "README.md" "quick_sort.c" "merge_sort_2.c" "merge_sort.c" "kmp.c" "heap_sort.c" ".gitignore" ".git/" ".#kmp.c" "../" "./")
+
+ ("/Users/rockuw/freeman/lisp/" (20593 11135) "test.el" "../" "./")
+
+ ("/Users/rockuw/freeman/" (20592 15129) "tool-chain/" "templates/" "stl/" "shell/" "ruby/" "rockuw.sinaapp.com/" "rails/" "ppts/" "openshift/" "notes/" "macruby/" "lisp/" "goagent/" "glibc/" "dp-samples/" "CV/" "cpp/" "c/" "books/" "blog/" "bin/" "algorithm-samples/" "../" "./")
+
+ ("/Users/rockuw/freeman/templates/" (20591 55137) "xml.xml" "tex.tex" "ruby.rb" "index.html" "cpp.cpp" "c.c" "c++.cpp" "../" "./")
+
+ ("/Users/rockuw/freeman/notes/" (20590 65268) "README" "paper.note" "mac.note" "linux.note" "java.note" "internet.note" "emacs.note" "c++.note" ".git/" "../" "./")
+
+ ("/Users/rockuw/freeman/bin/" (20574 45142) "unrar" "template" "rar" "markdown" "../" "./")
+
+ ("/tmp/dir/" (20587 63756) "b" "a" "../" "./")
+
+ ("/Users/" (20543 16004) "Shared/" "rockuw/" "dark/" ".localized" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
