@@ -58,3 +58,8 @@
 
 ;; flyspell mode off
 (flyspell-mode nil)
+
+;; template mode
+(add-to-list 'load-path "~/.emacs.d/template-mode")
+(require 'template)
+(template-initialize)

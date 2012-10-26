@@ -1,23 +1,23 @@
 
 ;; ----- smex-history -----
 (
- compile
+ template-new-file
+ byte-compile-file
  package-install
  package-refresh-contents
  eval-buffer
- kill-ring-save
- copy-file
- gdb
+ dired
+ query-replace
 )
 
 ;; ----- smex-data -----
 (
- (package-install . 11)
+ (package-install . 13)
  (electric-indent-mode . 1)
  (gdb . 17)
  (line-number-mode . 8)
  (linum-mode . 5)
- (compile . 74)
+ (compile . 124)
  (c-mode . 2)
  (shell . 9)
  (calendar . 1)
@@ -65,11 +65,11 @@
  (ruby-mode . 4)
  (html-mode . 1)
  (load-theme . 13)
- (eval-buffer . 5)
- (package-refresh-contents . 4)
+ (eval-buffer . 7)
+ (package-refresh-contents . 6)
  (list-packages . 1)
- (eshell . 8)
- (dired . 2)
+ (eshell . 9)
+ (dired . 8)
  (flymake-mode . 4)
  (flymake-start-syntax-check . 1)
  (inf-ruby . 1)
@@ -82,4 +82,9 @@
  (copy-file . 1)
  (kill-ring-save . 1)
  (php-mode . 2)
+ (server-start . 1)
+ (query-replace . 5)
+ (make-directory . 1)
+ (byte-compile-file . 1)
+ (template-new-file . 3)
 )

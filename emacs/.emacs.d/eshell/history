@@ -61,3 +61,4 @@ rails console
 rails console
 ls
 ./hello -DABD=123
+ls
