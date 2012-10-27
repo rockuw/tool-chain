@@ -63,3 +63,21 @@
 (add-to-list 'load-path "~/.emacs.d/template-mode")
 (require 'template)
 (template-initialize)
+
+;; turn off ruby deep indent
+;; # deep indent on
+;; some_object.some_function(
+;;                            arg1,
+;;                            arg2)
+;; # deep indent off
+;; some_object.some_function(
+;;   arg1,
+;;   arg2)
+(setq ruby-deep-indent-paren nil)
+
+;; cucumber feature mode
+(add-to-list 'load-path "~/.emacs.d/cucumber")
+(setq feature-detect-language "en")
+(setq feature-default-i18n-file "~/.emacs.d/cucumber/i18n.yml")
+(require 'feature-mode)
+(add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))

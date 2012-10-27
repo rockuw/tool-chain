@@ -1,18 +1,18 @@
 
 ;; ----- smex-history -----
 (
- template-new-file
- byte-compile-file
  package-install
  package-refresh-contents
  eval-buffer
+ magit-status
+ template-new-file
  dired
  query-replace
 )
 
 ;; ----- smex-data -----
 (
- (package-install . 13)
+ (package-install . 14)
  (electric-indent-mode . 1)
  (gdb . 17)
  (line-number-mode . 8)
@@ -26,7 +26,7 @@
  (hanoi . 1)
  (tetris . 1)
  (replace-string . 5)
- (magit-status . 1)
+ (magit-status . 4)
  (magit-log . 1)
  (comment-region . 1)
  (c-macro-expand . 2)
@@ -85,6 +85,5 @@
  (server-start . 1)
  (query-replace . 5)
  (make-directory . 1)
- (byte-compile-file . 1)
- (template-new-file . 3)
+ (template-new-file . 2)
 )
