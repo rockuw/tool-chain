@@ -62,3 +62,10 @@ rails console
 ls
 ./hello -DABD=123
 ls
+cd ~/Downloads/
+ls
+tar zxvf OSS_C_API.tar.gz
+ls
+cd OSS_C_API/
+ls
+open doc/html/index.html

@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
- package-install
- package-refresh-contents
- eval-buffer
- magit-status
- template-new-file
+ byte-compile-file
  dired
- query-replace
+ eval-buffer
+ show-file-name
+ minibuffer-insert-file-name-at-point
+ template-new-file
+ auto-complete-mode
 )
 
 ;; ----- smex-data -----
@@ -47,10 +47,10 @@
  (untabify . 1)
  (ac-complete . 1)
  (complete-tag . 2)
- (auto-complete-mode . 12)
+ (auto-complete-mode . 18)
  (abbrev-mode . 1)
- (flyspell-mode . 9)
- (ac-flyspell-workaround . 1)
+ (flyspell-mode . 16)
+ (ac-flyspell-workaround . 8)
  (kill-comment . 1)
  (visit-tags-table . 1)
  (font-lock-mode . 2)
@@ -65,11 +65,11 @@
  (ruby-mode . 4)
  (html-mode . 1)
  (load-theme . 13)
- (eval-buffer . 7)
+ (eval-buffer . 10)
  (package-refresh-contents . 6)
  (list-packages . 1)
- (eshell . 9)
- (dired . 8)
+ (eshell . 10)
+ (dired . 12)
  (flymake-mode . 4)
  (flymake-start-syntax-check . 1)
  (inf-ruby . 1)
@@ -85,5 +85,9 @@
  (server-start . 1)
  (query-replace . 5)
  (make-directory . 1)
- (template-new-file . 2)
+ (template-new-file . 6)
+ (minibuffer-insert-file-name-at-point . 2)
+ (show-file-name . 1)
+ (test-find-file . 1)
+ (byte-compile-file . 1)
 )

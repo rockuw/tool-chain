@@ -63,6 +63,12 @@
 (add-to-list 'load-path "~/.emacs.d/template-mode")
 (require 'template)
 (template-initialize)
+(add-hook 'find-file-not-found-hooks 'new-file-from-template)
+
+(defun new-file-from-template ()
+  (template-new-file
+   (buffer-file-name)
+   (cdr (template-derivation (buffer-file-name) t t))))
 
 ;; turn off ruby deep indent
 ;; # deep indent on
@@ -81,3 +87,9 @@
 (setq feature-default-i18n-file "~/.emacs.d/cucumber/i18n.yml")
 (require 'feature-mode)
 (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
+
+;; show the file path in the current buffer
+(defun show-file-name ()
+  (interactive)
+  (message (buffer-file-name)))
+
