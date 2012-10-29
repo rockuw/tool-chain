@@ -1,6 +1,11 @@
+# ignore emacs backups
 emacs/.emacs.d/backups/*
+
+# ignore emacs runtime data
 emacs/.emacs.d/.smex-items
 emacs/.emacs.d/ac-comphist.dat
 emacs/.emacs.d/eshell/*
 emacs/.emacs.d/places
-emacs/*.elc
+
+# ignore compiled source
+emacs/**/*.elc
