@@ -27,6 +27,8 @@
   "Major mode for editing Markdown files" t)
 (setq auto-mode-alist
       (cons '("\\.mk?d$" . markdown-mode) auto-mode-alist))
+(setq auto-mode-alist
+      (cons '("\\.note$" . markdown-mode) auto-mode-alist))
 
 ;; php mode
 (setq auto-mode-alist
