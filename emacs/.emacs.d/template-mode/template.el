@@ -498,9 +498,10 @@ You should have called `template-initialize' to enable this feature."
 		(const :tag "Without confirmation" t)
 		(sexp :tag "With confirmation" :format "%t" :value query)))
 
-(defcustom template-find-file-commands
-  '(find-file find-file-other-frame find-file-other-screen
-	      find-file-other-window find-file-at-point ffap nil)
+;; this feature is annoying @rockuw
+;; (defcustom template-find-file-commands
+;;   '(find-file find-file-other-frame find-file-other-screen
+;; 	      find-file-other-window find-file-at-point ffap nil)
   "*Commands which use templates as last resort, see `template-auto-insert'.
 See also `template-file-select-commands'.
 

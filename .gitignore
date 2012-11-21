@@ -1,5 +1,6 @@
-# ignore emacs backups
+# ignore emacs backups and auto-save-list
 emacs/.emacs.d/backups/*
+emacs/.emacs.d/auto-save-list/*
 
 # ignore emacs runtime data
 emacs/.emacs.d/.smex-items

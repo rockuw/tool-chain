@@ -66,9 +66,6 @@
 (defun esk-turn-on-paredit ()
   (paredit-mode t))
 
-(defun esk-turn-on-idle-highlight-mode ()
-  (idle-highlight-mode t))
-
 (defun esk-pretty-lambdas ()
   (font-lock-add-keywords
    nil `(("(?\\(lambda\\>\\)"
@@ -87,7 +84,6 @@
 (add-hook 'prog-mode-hook 'esk-turn-on-save-place-mode)
 (add-hook 'prog-mode-hook 'esk-pretty-lambdas)
 (add-hook 'prog-mode-hook 'esk-add-watchwords)
-(add-hook 'prog-mode-hook 'esk-turn-on-idle-highlight-mode)
 
 (defun esk-prog-mode-hook ()
   (run-hooks 'prog-mode-hook))
