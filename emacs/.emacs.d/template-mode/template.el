@@ -497,11 +497,12 @@ You should have called `template-initialize' to enable this feature."
   :type '(radio (const :tag "No" nil)
 		(const :tag "Without confirmation" t)
 		(sexp :tag "With confirmation" :format "%t" :value query)))
-
-;; this feature is annoying @rockuw
-;; (defcustom template-find-file-commands
-;;   '(find-file find-file-other-frame find-file-other-screen
-;; 	      find-file-other-window find-file-at-point ffap nil)
+;; @rockuw: 
+;; ffap is really annoying
+(defcustom template-find-file-commands
+  '(find-file find-file-other-frame find-file-other-screen
+	      find-file-other-window nil)
+  
   "*Commands which use templates as last resort, see `template-auto-insert'.
 See also `template-file-select-commands'.
 
@@ -1697,17 +1698,17 @@ in `find-file-not-found-hooks'."
 		(setq this-command 'session-disable)
 		t)))))
 
-(defun template-ffap-find-file (filename)
-  "Function to use in `ffap-file-finder'.
-Add an entry to `command-history' if necessary and call function in
-`template-ffap-file-finder' with argument FILENAME."
-  (or (memq (car-safe (car command-history))
-	    '(ffap find-file-at-point))
-      (setq command-history
-	    (cons (list 'find-file-at-point filename) command-history)))
-  (if (eq template-ffap-file-finder 'template-ffap-find-file)
-      (find-file filename)
-    (funcall template-ffap-file-finder filename)))
+;; (defun template-ffap-find-file (filename)
+;;   "Function to use in `ffap-file-finder'.
+;; Add an entry to `command-history' if necessary and call function in
+;; `template-ffap-file-finder' with argument FILENAME."
+;;   (or (memq (car-safe (car command-history))
+;; 	    '(ffap find-file-at-point))
+;;       (setq command-history
+;; 	    (cons (list 'find-file-at-point filename) command-history)))
+;;   (if (eq template-ffap-file-finder 'template-ffap-find-file)
+;;       (find-file filename)
+;;     (funcall template-ffap-file-finder filename)))
 
 
 ;;;===========================================================================
@@ -2597,15 +2598,15 @@ See function and variable `template-initialize'."
   (when (or (eq template-initialize t)
 	    (memq 'auto template-initialize))
     (add-hook 'write-file-hooks 'template-update-buffer)
-    (add-hook 'find-file-not-found-hooks 'template-not-found-function t))
-  (when (or (eq template-initialize t)
-	    (memq 'ffap template-initialize))
-    (or template-ffap-file-finder
-	(setq template-ffap-file-finder
-	      (if (boundp 'ffap-file-finder)
-		  ffap-file-finder
-		(or (get 'ffap-file-finder 'saved-value) 'find-file))))
-    (setq ffap-file-finder 'template-ffap-find-file)))
+    (add-hook 'find-file-not-found-hooks 'template-not-found-function t)))
+  ;; (when (or (eq template-initialize t)
+  ;;           (memq 'ffap template-initialize))
+  ;;   (or template-ffap-file-finder
+  ;;       (setq template-ffap-file-finder
+  ;;             (if (boundp 'ffap-file-finder)
+  ;;       	  ffap-file-finder
+  ;;       	(or (get 'ffap-file-finder 'saved-value) 'find-file))))
+  ;;   (setq ffap-file-finder 'template-ffap-find-file)))
 
 ;;; Local IspellPersDict: .ispell_template
 ;;; template.el ends here

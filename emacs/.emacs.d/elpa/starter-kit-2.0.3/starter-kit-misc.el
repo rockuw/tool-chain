@@ -84,7 +84,9 @@
       ido-enable-flex-matching t
       ido-auto-merge-work-directories-length nil
       ido-create-new-buffer 'always
-      ido-use-filename-at-point 'guess
+      ;; set to 'guess to use find-file-at-point feature, which is
+      ;; really annoying
+      ido-use-filename-at-point nil
       ido-use-virtual-buffers t
       ido-handle-duplicate-virtual-buffers 2
       ido-max-prospects 10)
