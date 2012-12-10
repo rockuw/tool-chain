@@ -7,6 +7,8 @@ emacs/.emacs.d/.smex-items
 emacs/.emacs.d/ac-comphist.dat
 emacs/.emacs.d/eshell/*
 emacs/.emacs.d/places
+emacs/.emacs.d/url
+emacs/.emacs.d/elpa/archives
 
 # ignore compiled source
-emacs/**/*.elc
+*.elc
