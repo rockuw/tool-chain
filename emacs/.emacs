@@ -8,6 +8,8 @@
 (ac-config-default)
 (ac-set-trigger-key "TAB")
 (setq ac-auto-start nil)
+(add-to-list 'ac-modes 'rhtml-mode)
+(add-to-list 'ac-modes 'coffee-mode)
 
 ;; set the line number color
 (custom-set-faces
