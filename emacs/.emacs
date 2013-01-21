@@ -14,10 +14,6 @@
 
 ;; set the line number color
 (custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
  '(linum ((t (:inherit (shadow default) :foreground "green")))))
 
 ;; yaml mode
@@ -52,19 +48,17 @@
                  line)
          'face 'linum)))
 
-;; rinari mode
+;; ido mode
 (require 'ido)
 (ido-mode t)
 
+;; rinari mode
 (add-to-list 'load-path "~/.emacs.d/rinari")
 (require 'rinari)
 
 ;; eruby mode/rhtml mode
 (add-to-list 'load-path "~/.emacs.d/rhtml")
 (require 'rhtml-mode)
-
-;; flyspell mode off
-(flyspell-mode nil)
 
 ;; template mode
 (add-to-list 'load-path "~/.emacs.d/template-mode")
@@ -84,22 +78,7 @@
 (require 'feature-mode)
 (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
 
-;; CEDET
-(load-file "~/.emacs.d/cedet-1.1/common/cedet.el")
-(global-ede-mode 1)
-(semantic-load-enable-code-helpers)
-(global-srecode-minor-mode 1)
-
-;; ECB (Emacs Code Browser)
-(add-to-list 'load-path "~/.emacs.d/ecb-2.40")
-(require 'ecb-autoloads)
-(setq stack-trace-on-error nil)
- 
 ;; show the file path in the current buffer
 (defun show-file-name ()
   (interactive)
   (message (buffer-file-name)))
-
-(custom-set-variables
- '(ecb-options-version "2.40")
- '(ecb-source-path (quote ("~/freeman"))))
